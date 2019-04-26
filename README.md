@@ -18,6 +18,13 @@ with the extension of direct training from raw sentences. SentencePiece allows u
 
 **This is not an official Google product.**
 
+## Installing on Compute Canada
+
+1. `cmake` as usual
+2. Add `PKG_CONFIG` path as necessary for `setup.py`.
+3. Add libary and include directories to `LIBRARY_PATH` and `CPATH`, respectively, in `~/*sh.rc` for `gcc` to work.
+4. `LD_LIBRARY_PATH` probably also needs to be updated, as well as `PATH` to the SPM binaries.
+
 ## Technical highlights
 - **Purely data driven**: SentencePiece trains tokenization and detokenization
   models from sentences. Pre-tokenization ([Moses tokenizer](https://github.com/moses-smt/mosesdecoder/blob/master/scripts/tokenizer/tokenizer.perl)/[MeCab](http://taku910.github.io/mecab/)/[KyTea](http://www.phontron.com/kytea/)) is not always required.
